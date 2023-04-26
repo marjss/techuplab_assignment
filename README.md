@@ -2,7 +2,7 @@
 Steps to install or initialize the project
 
 
-Step1:- Open Config.php and update the db and url parameters
+#Step1:- Open Config.php and update the db and url parameters
 
 
 for e.g. 
@@ -11,8 +11,10 @@ for e.g.
             "db_username" => "root",
             "db_password" => "",
             "url" => "http://localhost/assignment/" //this is the rest api base url.
+            
+            
 ---------------------------------------------------------------------------------------
-Step 2:- 
+#Step 2:- 
 
 Open the POSTMAN and run the following url 
 
@@ -30,7 +32,6 @@ Get the JWT Token
 Login using the following url and generate the JWT Token
 
 Method:- POST
-
 URL:- http://localhost/assignment/api.php?action=login
 
 Body :-
@@ -47,8 +48,14 @@ OUTPUT:-
 }
 
 Copy the token [Valid for 1 hour, we need to re-login after 1 hour to generate new token]
+
+
 -----------------------------------------------------------------------------------------------------
+
+
 Step 4:- After getting the JWT token we can hit various endpoints and get the desired results
+
+
 -----------------------------------------------------------------------------------------------------
 
 
@@ -65,7 +72,11 @@ Body:-
     "email": "sud@new.com",
     "password": "test@123"
 }
+
+
 ----------------------------------------------------------------------------------------
+
+
 Create Tasks and Notes
 
 URL:- http://localhost/assignment/api.php?action=create_task
@@ -84,6 +95,8 @@ status:New
 priority:High
 notes: [{"subject": "test test test trst","note":"Hello this is test note"},{"subject": "Example note 2","note":"The world is not enough."}]
 attachments[]: FILE TYPE
+
+
 ---------------------------------------------------------------------------------------------
 
 Retrieve all the tasks with Notes
@@ -100,5 +113,7 @@ status:incomplete
 due_date:30-04-2023
 priority:medium
 notes:true
+
+
 -------------------------------------------------------------------------------------------------
 
